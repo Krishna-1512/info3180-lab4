@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{% block main %}
+<div class='image_grid'>
+    {% for upload in uploads %}
+        <img class="imgs" src= "{{ url_for('get_image', filename=upload) }}">
+    {% endfor %}
+</div>
+
+{%endblock%}
